@@ -1,0 +1,92 @@
+
+$padding: 10px
+$tick-width: 10px
+$line-width: 2px
+$line-color: #eaeaea
+$total-padding: $padding*2 + $tick-width
+
+.a-json
+  &-item
+    border-left: $line-width solid $line_color
+    &:last-child
+      border-left: $line_width solid transparent
+
+  &-title
+    display: flex
+    align-content: center
+    &-ntick
+      display: flex
+      min-width: $tick-width
+      align-items: center
+      justify-content: center
+      &::before
+        content: ''
+        background-color: black
+        height: $tick-width*0.8
+        width: $tick-width*0.8
+        border-radius: 999999px
+    &-before
+      min-width: $padding
+    &-tick
+      position: relative
+      min-width: $tick-width
+      cursor: pointer
+      &::after
+        content: ''
+        position: absolute
+        border-left: $tick-width*0.4 solid transparent
+        border-top: $tick-width*0.7 solid black
+        border-right: $tick-width*0.4 solid transparent
+        height: 0px
+        width: 0px
+        left: $tick-width*0.1
+        bottom: calc(50% - #{$tick-width*0.3})
+        transform-origin: 50% 50%
+        transition: transform 0.1s
+      &::before
+        content: ''
+        position: absolute
+        border-left: $line-width solid $line-color
+        width: 50%
+        height: calc(50% - #{$tick-width*0.4})
+        left: calc(50% - #{$line-width})
+        bottom: 0
+      &.collapsed
+        &::after
+          transform: rotate(-90deg)
+          transform-origin: 50% 50%
+          transition: transform 0.1s
+        &::before
+          border-left: none
+    &-after
+      min-width: $padding
+
+  &-content
+    padding-left: $padding + $tick-width*0.5 - $line-width
+
+  &-l-line
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      border-bottom: $line-width solid $line-color
+      border-radius: 0px 8px
+      border-left: $line-width solid $line-color
+      height: calc(50% + #{$line-width})
+      width: 100%
+      left: -$line-width
+      bottom: 50%
+
+  &-h-line
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      border-bottom: $line-width solid $line-color
+      height: calc(50% + #{$line-width})
+      width: 100%
+      left: 0
+      bottom: 50%
+
+
+  
