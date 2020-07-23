@@ -35,7 +35,14 @@
 
 <script>
 /* eslint-disable no-console */
+import APortal from './APortal.js'
+import AOverlay from './AOverlay/AOverlay.js'
+
 export default {
+  components: {
+    APortal,
+    AOverlay
+  },
   props: {
     content: { type: Array, default: () => [] },
     autocompleteDef: { type: Object, default: () => ({}) },

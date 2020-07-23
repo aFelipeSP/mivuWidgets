@@ -29,11 +29,13 @@
 <script>
 /* eslint-disable no-console */
 import ADraggable from '@/components/ADraggable'
+import AButton from './AButton.vue'
 import { deepCopy } from '@/utils/copy'
 
 export default {
   components: {
-    ADraggable
+    ADraggable,
+    AButton
   },
   props: {
     value: [Array, Object],

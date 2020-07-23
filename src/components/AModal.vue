@@ -15,7 +15,14 @@
 </template>
 
 <script>
+import APortal from './APortal.js'
+import AOverlay from './AOverlay/AOverlay.js'
+
 export default {
+  components: {
+    APortal,
+    AOverlay
+  },
   props: {
     value: { type: Boolean, default: false },
     strict: { type: Boolean, default: true },

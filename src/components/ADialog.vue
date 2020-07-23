@@ -42,8 +42,14 @@
 
 <script>
 /* eslint-disable no-console */
+import AModal from './AModal.vue'
+import AButton from './AButton.vue'
 
 export default {
+  components: {
+    AModal,
+    AButton
+  },
   props: {
     value: Boolean,
     title: String,

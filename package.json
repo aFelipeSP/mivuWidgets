@@ -1,7 +1,15 @@
 {
-  "name": "mivu-widgets",
+  "name": "@mivu/mivu-widgets",
   "version": "0.1.0",
   "private": true,
+  "main": "./dist/mivuWidgets.common.js",
+  "files": [
+    "dist/*",
+    "src/*",
+    "public/*",
+    "*.json",
+    "*.js"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",

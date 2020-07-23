@@ -58,13 +58,15 @@
 </template>
 
 <script>
-import ARespDropdown from '@/components/ARespDropdown'
+import ARespDropdown from './ARespDropdown'
+import AInput from './AInput.vue'
 import { deepCopy } from '@/utils/copy'
 /* eslint-disable no-console */
 
 export default {
   components: {
-    ARespDropdown
+    ARespDropdown,
+    AInput
   },
   props: {
     value: [String, Number, Array, Object],

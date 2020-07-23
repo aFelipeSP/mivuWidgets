@@ -27,8 +27,12 @@
 <script>
 /* eslint-disable no-console */
 import { deepCopy } from '@/utils/copy'
+import AButton from './AButton.vue'
 
 export default {
+  components: {
+    AButton
+  },
   props: {
     value: {type: [Array, Object]},
     newValueExample: {
